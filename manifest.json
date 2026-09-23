@@ -1,0 +1,11 @@
+{
+  "name": "La Balinaise — Bons cadeaux",
+  "short_name": "Bons cadeaux",
+  "description": "Gestion des bons cadeaux de La Balinaise",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7f5",
+  "theme_color": "#075b43",
+  "lang": "fr-FR",
+  "orientation": "portrait"
+}
