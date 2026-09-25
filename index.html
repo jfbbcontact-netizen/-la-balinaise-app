@@ -8,19 +8,19 @@
 <section id="home"><div class="actions"><button class="primary" onclick="show('new')">＋ Nouveau bon</button><button class="secondary" onclick="show('search')">⌕ Rechercher</button><button class="secondary" onclick="shareAllVouchers()">↗ Exporter les bons</button></div>
 <div class="panel" style="margin-top:12px;">
 <h3 style="margin:0 0 8px;">Sauvegarde</h3>
-<p style="margin:0 0 10px;font-size:14px;line-height:1.4;">Sauvegarde tous les bons pour les restaurer sur cet appareil ou un autre.</p>
+<p style="margin:0 0 10px;font-size:14px;line-height:1.4;">Enregistre une copie complète des bons sur ton iPhone, dans Fichiers / iCloud Drive.</p>
 <div class="actions">
-<button class="secondary" type="button" onclick="exportLBDatabase()">💾 Sauvegarder tous les bons</button>
-<label style="display:block;"><input id="lbImportFile" type="file" accept=".json,application/json" onchange="importLBDatabase(event)" style="display:none;"><span style="display:block;text-align:center;padding:14px;border-radius:13px;border:1px solid #d9dedb;background:#fff;color:var(--green);font-weight:700;cursor:pointer;">📥 Importer une sauvegarde</span></label>
+<button class="secondary" type="button" onclick="backupLB()">💾 Sauvegarder tous les bons</button>
+<button class="secondary" type="button" onclick="document.getElementById('lbRestoreFile').click()">📥 Importer une sauvegarde</button>
+<input id="lbRestoreFile" type="file" accept=".json,application/json" style="display:none" onchange="restoreLB(event)">
 </div>
 <p id="backupMessage" style="margin:10px 0 0;font-size:13px;"></p>
 </div>
 <div class="panel" style="margin-top:12px;">
 <h3 style="margin:0 0 8px;">Supprimer un bon</h3>
-<p style="margin:0 0 10px;font-size:14px;line-height:1.4;">Suppression définitive d'un bon de la base locale.</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap;">
 <input id="deleteVoucherNumber" type="text" placeholder="N° du bon" style="flex:1;min-width:170px;">
-<button class="secondary" type="button" onclick="supprimerBonParNumero(document.getElementById('deleteVoucherNumber').value)">🗑️ Supprimer</button>
+<button class="secondary" type="button" onclick="deleteLB()">🗑️ Supprimer</button>
 </div>
 </div>
 <div class="stats"><div class="stat"><b id="countFollow">0</b><span>À suivre</span></div><div class="stat"><b id="countRemain">0</b><span>Reliquats</span></div><div class="stat"><b id="countExpired">0</b><span>Périmés</span></div></div><div class="list" id="list"></div></section>
