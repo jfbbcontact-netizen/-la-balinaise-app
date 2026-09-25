@@ -1,0 +1,9 @@
+{
+  "name": "La Balinaise — Bons cadeaux",
+  "short_name": "Bons La Balinaise",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f5",
+  "theme_color": "#075b43",
+  "lang": "fr-FR"
+}
